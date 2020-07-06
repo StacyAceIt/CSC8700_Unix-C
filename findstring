@@ -13,6 +13,7 @@ do
         
         echo ""
         
+        # $1 refers to the first column
         top5=$(grep -i $i $W|awk '{ print length(), $1 | "sort -nr" }' |head -5\
         |cut -d " " -f 2)
         
