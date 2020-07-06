@@ -1,0 +1,5 @@
+#!/bin/bash
+rm cfup
+rm cfdig
+ln cflow cfup
+ln cflow cfdig
