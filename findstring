@@ -1,0 +1,33 @@
+#this script find the top 5 longest word that contains a pattern
+#and sort them by the position of the pattern in the word
+
+#!/bin/bash
+W=/usr/share/dict/words
+
+for i in $*
+do
+
+        echo "looking for the top 5 longest words that contains $i"
+        
+        grep -i $i $W|awk '{ print length(), $1 | "sort -nr" }' |head -5
+        
+        echo ""
+        
+        top5=$(grep -i $i $W|awk '{ print length(), $1 | "sort -nr" }' |head -5\
+        |cut -d " " -f 2)
+        
+        echo "$top5"
+        
+        echo ""
+        
+        echo "sorting by position of $i"
+        echo ""
+       
+        echo "$top5"|sed "s/$i/$i /g"|awk '{ print length($1), $0| "sort -n" }'|sed "s/$i /$i/g"
+    
+
+
+
+
+done
+
