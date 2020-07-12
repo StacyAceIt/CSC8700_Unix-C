@@ -8,6 +8,8 @@
 
 #!/bin/bash
 
+
+
 fourLetterWords=$(awk '{
 if(length($0)==5)
     {
@@ -34,4 +36,8 @@ do
  fi
 
 done
+
+fourLetterWords3=$(cat hello_world|grep -i '^.....$'|awk '{print substr($0,1,2) substr($0,4,2)}')
+echo " 3 $fourLetterWords3"
+
 
