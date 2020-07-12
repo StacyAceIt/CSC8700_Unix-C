@@ -4,7 +4,10 @@
 #  
 #
 #  Created by Stacy Zhang on 7/11/20.
-#  
+#
+
+primary=$1
+secondary=$2
 
 numOfLines=$(awk 'END {print NR}' secondary)
 
