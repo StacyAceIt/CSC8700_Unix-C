@@ -11,7 +11,7 @@ testPalindrome(){
      testInput=$1
      reversedNum=`echo $testInput|rev`
      #echo "reversed $reversedNum"
-     if [ $testInput -eq $reversedNum ]
+     if [ $testInput == $reversedNum ]
       then retval=0
      else
         retval=1
@@ -24,10 +24,24 @@ findPalindrome(){
  #echo "find palindrome $input "
   while [ $input -lt $upperlimit ]
   do
+    echo $input
+    #numberOfDigits=${#input}
+    #numberOfDigits=$(echo $input|awk '{print length()}')
+    numberOfDigits=$(echo $input|awk '{print length($0)}')
+    #echo "num of digits $numberOfDigits"
+    numberOfZeros=`echo "3-$numberOfDigits"|bc`
+    #echo "num of zeros $numberOfZeros"
+    
+    #concatNum=$(printf '%d%*s' "$input" "$numberOfZeros"|tr ' ' '0')
+    
+    #echo "concat number $concatNum"
+    
     testPalindrome $input
     retval=$?
     if [[ "$retval" == 0 ]]
         then echo "$input is palindrome"
+        milesLeft=`echo "$input-$1"|bc`
+        echo "miles left $milesLeft"
         break
 #    else
 #        echo "$input is not palindrome"
