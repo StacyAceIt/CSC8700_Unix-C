@@ -1,0 +1,27 @@
+11 awk is a scripting language used for manipulating data and generating reports
+12 join is a command line utility for joining lines of two files on a commnd field.
+13 getopt is used to break up options in command line for easy paring by shell procedures and to check for legal options.
+14 make is to determine automatically which pieces of a large program need to be recompiled and issue the commands to recompile them.
+15 rev is to reverse the lines characterwise.
+
+21 trap is a function of the shell that responds to hardware signals and other events.
+22 test is used to check file types and compare values.
+23 set is used to set shell variables.
+24 touch is used to create, change, and modify timestamps of a file.
+25 unmask is a four-digit octal number that Unix uses to determine the file permission for newly created files.
+
+21 pmap reports the memory map of a process or processes.
+22 xargs is used for building an execution pipeline from standard input.
+23 eval is used to execute arguments as a shell command.
+24 expr is used to evaluate an expression and outputs the corresponding value.
+25 tar is tape archive which is used to store and extract files from an archive file known as a tarfile.
+
+Fork creates new processes. A process creates a copy of itself.
+Exec is used to execute a command from the bash itself. It doesn't create a new process, but it replaces bash with the command to be executed.
+Exit is used to exit from shell.
+Read reads a line of input from standard input or a file passed as an arugment to its -u flag.
+
+write is used to send messages to another user by writing a message directory to another user's TTY.
+fopen opens a file whose name is the string pointed to by pathname and assicates a stream with it.
+fscanf reads input from standard input stream stdin.
+system executes a command specified in command by calling /bin/sh -c command
