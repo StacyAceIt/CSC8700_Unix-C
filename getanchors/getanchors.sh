@@ -7,7 +7,7 @@
 #  
 
 
-grep -o '<a href=[^<]*'|sed 's/<a href="//g;s/>/    /g'
-#grep -o '<a href=[^<]*'|sed 's/<a href="//g;s/>/    /g' | tr -d \"
+grep -o '<a href=[^<]*'|sed 's/<a href="//g;s/>/    /g;s/\"//g'
+
 
 
